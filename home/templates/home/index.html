@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demaxl's Django Projects</title>
+    <link rel="stylesheet" href="{% static 'home/styles.css' %}">
+</head>
+<body>
+    <h1>Home page</h1>
+    <ul>
+        {% for app_name, url in apps %}
+            <li><a href="./{{url}}">{{ app_name }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

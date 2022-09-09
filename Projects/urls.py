@@ -18,6 +18,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("", include("home.urls")),
     path('survey_form/', include("survey_form.urls")),
-    path('memorypuzzle/', include("MemoryPuzzle.urls"))
+    path('memorypuzzle/', include("MemoryPuzzle.urls")),
 ]
