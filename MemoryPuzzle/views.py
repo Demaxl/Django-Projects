@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.core.files.storage import default_storage
 
-# Create your views here.
+
+board = []
+
 def index(request):
-    return HttpResponse("<h1>The memory puzzle app hasnt been implemented yet</h>")
+    return render(request, "MemoryPuzzle/index.html", {})
