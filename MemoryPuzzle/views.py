@@ -1,9 +1,16 @@
+import os
+
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.core.files.storage import default_storage
 
+
+IMAGES_BASE_PATH = './MemoryPuzzle/static/MemoryPuzzle/images/'
 
 board = []
+images_path = [path for path in os.listdir(IMAGES_BASE_PATH)]
 
 def index(request):
-    return render(request, "MemoryPuzzle/index.html", {})
+    print(images_path)
+    return render(request, "MemoryPuzzle/index.html", {
+        "images": images_path
+    })

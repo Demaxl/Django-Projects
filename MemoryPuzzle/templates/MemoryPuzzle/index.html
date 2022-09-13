@@ -11,11 +11,11 @@
 <body>
     <div class="main">
         <div class="container">
-            {% comment %} {% for r in range(6) %}
-                {% for c in range(5) %}
-                    <div class="piece">Field</div>
-                {% endfor %}
-            {% endfor %} {% endcomment %}
+            {% for img in images %}
+                <div class="piece">
+                    <img src="{% static 'MemoryPuzzle/images/' %}{{img}}" alt="puzzle image">
+                </div>
+            {% endfor %}
         </div>
 
     </div>
