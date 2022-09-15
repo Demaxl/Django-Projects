@@ -12,12 +12,13 @@
     <div class="main">
         <div class="container">
             {% for img in images %}
-                <div class="piece">
+                <div class="piece" onclick="callback.call(this)">
                     <img src="{% static 'MemoryPuzzle/images/' %}{{img}}" alt="puzzle image">
                 </div>
             {% endfor %}
         </div>
 
     </div>
+    <script src="{% static 'MemoryPuzzle/main.js' %}"></script>
 </body>
 </html>

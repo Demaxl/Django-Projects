@@ -2,7 +2,9 @@ $boxsize: 70px;
 $gap: 10px;
 $boardwidth: 6;
 
-
+:root {
+    --image-overlay: -100%;
+}
 
 *{
     box-sizing: border-box;
@@ -12,6 +14,10 @@ $boardwidth: 6;
 body {
     font-size: 20px;
     background-color: #3C3C64;
+}
+
+.main {
+    margin: 25% 0;
 }
 
 .container {
@@ -28,6 +34,7 @@ body {
     // background-color: white; 
     display: flex;
     position: relative;
+    cursor: pointer;
 
     img {
         width: 100%;
@@ -42,6 +49,12 @@ body {
         display: block;
         width: 100%;
         background-color: white;
-        margin-left: -100%;
+        margin-left: var(--image-overlay);
+        transition: all 0.2s;
+    }
+
+    &:hover {
+        outline: 4px solid blue;
+
     }
 }

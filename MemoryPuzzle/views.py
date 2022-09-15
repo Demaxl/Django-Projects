@@ -8,7 +8,7 @@ IMAGES_BASE_PATH = './MemoryPuzzle/static/MemoryPuzzle/images/'
 BOARDWIDTH = 6
 BOARDHEIGHT = 5
 
-BOX_NUM = BOARDWIDTH * BOARDHEIGHT
+BOX_NUM = int(BOARDWIDTH * BOARDHEIGHT/2)
 
 
 def prepare():
@@ -16,6 +16,10 @@ def prepare():
 
     random.shuffle(images_path)
     images = images_path[:BOX_NUM]
+    
+    images *= 2
+
+    random.shuffle(images)
 
     return images
 

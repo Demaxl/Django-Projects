@@ -1,3 +1,7 @@
+:root {
+  --image-overlay: -100%;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -5,6 +9,10 @@
 body {
   font-size: 20px;
   background-color: #3C3C64;
+}
+
+.main {
+  margin: 25% 0;
 }
 
 .container {
@@ -18,6 +26,7 @@ body {
   height: 70px;
   display: flex;
   position: relative;
+  cursor: pointer;
 }
 .piece img {
   width: 100%;
@@ -30,5 +39,9 @@ body {
   display: block;
   width: 100%;
   background-color: white;
-  margin-left: -100%;
+  margin-left: var(--image-overlay);
+  transition: all 0.2s;
+}
+.piece:hover {
+  outline: 4px solid blue;
 }/*# sourceMappingURL=styles.css.map */
